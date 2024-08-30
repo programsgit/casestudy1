@@ -18,20 +18,7 @@ st.set_page_config(
 )
 
 # Apply custom CSS for dark theme
-st.markdown(
-    '''
-    <style type="text/css">
-        body { background-color: #121212; color: #e0e0e0; }
-        .css-1l02d9a, .css-1rs6osf { background-color: #1e1e1e; }
-        .css-1f1d60w { color: #e0e0e0; }
-        .css-1o4ux7r, .css-1n1v10h { background-color: #333; color: #e0e0e0; }
-        .css-1i64wgt { background-color: #121212; }
-        .stButton>button { background-color: #333; color: #e0e0e0; border: none; }
-        .stTextInput>div>input, .stSelectbox>div>select { background-color: #333; color: #e0e0e0; border: 1px solid #555; }
-        .css-1y4p8pa { width: 100%; padding: 0px 1rem 0px 2rem; max-width: 100%; }
-        .css-1544g2n { padding: 2rem 1rem 1.5rem; }
-    </style>''', unsafe_allow_html=True
-)
+
 
 # Set up Streamlit app title
 st.title(":film_frames::film_projector: Netflix Data Dashboard :tv:")
