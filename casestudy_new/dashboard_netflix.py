@@ -54,7 +54,7 @@ st.markdown(
 st.title(":film_frames::film_projector: Netflix Data Dashboard :tv:")
 
 # Load the dataset
-df = pd.read_csv('netflix_titles.csv')
+df = pd.read_csv('casestudy_new/netflix_titles.csv')
 
 # Display basic information about the dataset
 # st.header('Dataset Overview')
@@ -70,7 +70,7 @@ df = pd.read_csv('netflix_titles.csv')
 
 
 ct1,ct2=st.columns(2)
-# ct1.image("netflix.jpg")
+# ct1.image("casestudy_new/netflix.jpg")
 #ct2.title("NetFlix Dashboard")
 df = pd.read_csv('netflix_titles.csv')
 
