@@ -72,7 +72,7 @@ df = pd.read_csv('casestudy_new/netflix_titles.csv')
 ct1,ct2=st.columns(2)
 # ct1.image("casestudy_new/netflix.jpg")
 #ct2.title("NetFlix Dashboard")
-df = pd.read_csv('netflix_titles.csv')
+df = pd.read_csv('casestudy_new/netflix_titles.csv')
 
 
 # create new columns for years and months
