@@ -16,7 +16,7 @@ from datetime import datetime
 warnings.filterwarnings('ignore')
 st.set_page_config(page_title="Netflix Dashboard", page_icon = "📺", layout = "centered", initial_sidebar_state="auto", menu_items=None)
 
-st.logo("netflix_logo.png")
+st.logo("casestudy_new/netflix_logo.png")
 #=================== ADD CSS file ============================
 # theme_folder = 'themes/blank'
 # css_files=['styles.css', 'sidebar.css', 'button.css', 'inputs.css']
