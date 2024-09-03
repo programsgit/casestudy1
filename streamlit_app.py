@@ -31,12 +31,76 @@ df['year'] = pd.to_datetime(df['release_year']).dt.year
 
 # Display basic statistics
 col1, col2, col3 = st.columns(3)
-col1.subheader("Total Movies and TV Shows")
-col1.subheader(df['show_id'].count())
-col2.subheader("Total Movies")
-col2.subheader(df[df['type'] == "Movie"]['type'].count())
-col3.subheader("Total TV Shows")
-col3.subheader(df[df['type'] == "TV Show"]['type'].count())
+
+st.markdown(
+    """
+    <style>
+    .custom-box {
+        border-radius: 15px; /* Curved corners */
+        border: 2px solid #ddd; /* Border color */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        padding: 20px; /* Padding inside the box */
+        background-color: #f9f9f9; /* Light background color */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		background: linear-gradient(
+            0deg,
+            #ffffff 25%,
+            #f0f0f0 25%,
+            #f0f0f0 50%,
+            #ffffff 50%,
+            #ffffff 75%,
+            #f0f0f0 75%,
+            #f0f0f0
+        );
+        background-size: 100% 10px;
+    }
+    .custom-box h3 {
+        margin: 0; /* Remove margin for heading */
+        padding: 10px; /* Padding around heading */
+        background-color: #333; /* Background color for heading */
+        color: #fff; /* Text color for heading */
+        text-align: center; /* Center-align the heading */
+        border-radius: 10px; /* Curved corners for heading background */
+        width: 100%; /* Ensure the background color spans the width */
+		background: linear-gradient(#333 10px, #333 10px) center/100% 20px;
+        border-radius: 20px 20px 20px 20px; /* Curved right side */
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        padding: 20px; /* Padding inside sidebar */
+    }
+    .custom-box p {
+        margin: 10px 0 0; /* Margin for value */
+        font-size: 48px; /* Font size for value */
+        color: #555; /* Value color */
+        font-weight: bold; /* Make value bold */
+    }
+    .column-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .column-wrapper > div {
+        flex: 1;
+        margin: 0 20px; /* Spacing between boxes */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Create layout columns
+col1, col2, col3 = st.columns(3)
+
+# Display basic statistics with custom styling
+with col1:
+    st.markdown('<div class="custom-box"><h3>All Contents</h3><p>{}</p></div>'.format(df['show_id'].count()), unsafe_allow_html=True)
+
+with col2:
+    st.markdown('<div class="custom-box"><h3>Movies</h3><p>{}</p></div>'.format(df[df['type'] == "Movie"]['type'].count()), unsafe_allow_html=True)
+
+with col3:
+    st.markdown('<div class="custom-box"><h3>TV Shows</h3><p>{}</p></div>'.format(df[df['type'] == "TV Show"]['type'].count()), unsafe_allow_html=True)
 
 st.divider()
 
