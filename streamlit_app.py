@@ -325,6 +325,7 @@ st.divider()
 st.subheader("Content Types Distribution")
 df.fillna("None", inplace=True)
 fig = px.treemap(df_filtered, path=["type", "listed_in"], values='year', color='listed_in', color_continuous_scale='Turbo')
+fig.update_traces(root_color="lightgrey")
 st.plotly_chart(fig, use_container_width=True)
 st.divider()
 
