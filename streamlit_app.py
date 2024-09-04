@@ -324,7 +324,7 @@ st.divider()
 # Hierarchical TreeMap
 st.subheader("Content Types Distribution")
 df.fillna("None", inplace=True)
-fig = px.treemap(df_filtered, path=["type", "listed_in"], values='year', color='listed_in')
+fig = px.treemap(df_filtered, path=["type", "listed_in"], values='year', color='listed_in', color_continuous_scale='Turbo')
 st.plotly_chart(fig, use_container_width=True)
 st.divider()
 
