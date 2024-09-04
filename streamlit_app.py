@@ -150,7 +150,7 @@ col1, col2, col3 = st.columns(3)
 
 # Display basic statistics with custom styling
 with col1:
-    st.markdown('<div class="custom-box"><h3>All Contents</h3><p>{}</p></div>'.format(df['show_id'].count()), unsafe_allow_html=True)
+    st.markdown('<div class="custom-box"><h3>Contents</h3><p>{}</p></div>'.format(df['show_id'].count()), unsafe_allow_html=True)
 
 with col2:
     st.markdown('<div class="custom-box"><h3>Movies</h3><p>{}</p></div>'.format(df[df['type'] == "Movie"]['type'].count()), unsafe_allow_html=True)
